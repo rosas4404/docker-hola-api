@@ -2,6 +2,9 @@
 FROM maven:3.9.6-eclipse-temurin-17 AS build
 WORKDIR /app
 COPY . .
+#le da permiso de ejecución al asistente de maven
+RUN chmod +x mvnw
+
 RUN ./mvnw clean package -DskipTests
 
 # Paso 2: Crear la imagen final ligera con Java 17
