@@ -10,6 +10,6 @@ public class Controller {
 
     @GetMapping("/hola")
     public String HolaController() {
-        return "Hola desde Spring Boot en Docker";
+        return "Hola desde Spring Boot desplegado en Render";
     }
 }
